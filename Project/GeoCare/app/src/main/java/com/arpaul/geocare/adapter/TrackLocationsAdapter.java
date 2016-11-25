@@ -12,8 +12,8 @@ import android.widget.Toast;
 import com.arpaul.geocare.BaseActivity;
 import com.arpaul.geocare.R;
 import com.arpaul.geocare.common.AppConstant;
-import com.arpaul.geocare.dataObject.ActivityRecogDO;
-import com.arpaul.geocare.dataObject.GeoFenceLocationDO;
+import com.arpaul.geocare.dataobject.ActivityRecogDO;
+import com.arpaul.geocare.dataobject.GeoFenceLocationDO;
 import com.arpaul.utilitieslib.CalendarUtils;
 
 import java.util.ArrayList;

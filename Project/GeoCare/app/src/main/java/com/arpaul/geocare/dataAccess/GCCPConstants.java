@@ -1,4 +1,4 @@
-package com.arpaul.geocare.dataAccess;
+package com.arpaul.geocare.dataaccess;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -8,7 +8,7 @@ import android.net.Uri;
  * Created by ARPaul on 07-01-2016.
  */
 public class GCCPConstants {
-    public static final String CONTENT_AUTHORITY = "com.arpaul.geocare.dataAccess.ContentProviderHelper";
+    public static final String CONTENT_AUTHORITY = "com.arpaul.geocare.dataaccess.ContentProviderHelper";
 
     public static final String DATABASE_NAME                    = "GeoCare.sqlite";
 

@@ -1,18 +1,15 @@
-package com.arpaul.geocare.activityRecognition;
+package com.arpaul.geocare.activityrecognition;
 
 import android.app.IntentService;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
-import android.support.v4.content.LocalBroadcastManager;
 
 import com.arpaul.geocare.R;
 import com.arpaul.geocare.common.AppConstant;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.dataObject.ActivityRecogDO;
-import com.arpaul.geocare.dataObject.GeoFenceLocationDO;
-import com.arpaul.utilitieslib.CalendarUtils;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.dataobject.ActivityRecogDO;
 import com.arpaul.utilitieslib.LogUtils;
 import com.google.android.gms.location.ActivityRecognitionResult;
 import com.google.android.gms.location.DetectedActivity;

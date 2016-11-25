@@ -1,4 +1,4 @@
-package com.arpaul.geocare.geoFence;
+package com.arpaul.geocare.geofence;
 
 import android.app.PendingIntent;
 import android.app.Service;
@@ -12,15 +12,14 @@ import android.widget.Toast;
 
 import com.arpaul.geocare.R;
 import com.arpaul.geocare.common.AppConstant;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
 import com.arpaul.utilitieslib.LogUtils;
 import com.arpaul.utilitieslib.StringUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.location.ActivityRecognition;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationServices;

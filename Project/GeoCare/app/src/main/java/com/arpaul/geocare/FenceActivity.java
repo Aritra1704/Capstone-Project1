@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 import com.arpaul.geocare.adapter.GeoLocationsAdapter;
 import com.arpaul.geocare.common.ApplicationInstance;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
 import com.arpaul.utilitieslib.StringUtils;
 
 import java.util.ArrayList;

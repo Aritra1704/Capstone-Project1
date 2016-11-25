@@ -1,4 +1,4 @@
-package com.arpaul.geocare.gcmService;
+package com.arpaul.geocare.gcmservice;
 
 import android.util.Log;
 

@@ -1,13 +1,11 @@
 package com.arpaul.geocare.fragment;
 
 import android.content.BroadcastReceiver;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteQueryBuilder;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -26,10 +24,9 @@ import com.arpaul.geocare.R;
 import com.arpaul.geocare.adapter.TrackLocationsAdapter;
 import com.arpaul.geocare.common.AppConstant;
 import com.arpaul.geocare.common.ApplicationInstance;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.dataObject.ActivityRecogDO;
-import com.arpaul.geocare.dataObject.GeoFenceLocationDO;
-import com.arpaul.utilitieslib.CalendarUtils;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.dataobject.ActivityRecogDO;
+import com.arpaul.geocare.dataobject.GeoFenceLocationDO;
 import com.arpaul.utilitieslib.LogUtils;
 import com.arpaul.utilitieslib.StringUtils;
 

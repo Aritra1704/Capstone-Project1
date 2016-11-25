@@ -1,4 +1,4 @@
-package com.arpaul.geocare.dataAccess;
+package com.arpaul.geocare.dataaccess;
 
 import android.content.ContentProvider;
 import android.content.ContentProviderOperation;
@@ -15,7 +15,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.arpaul.geocare.common.ApplicationInstance;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
 import com.arpaul.utilitieslib.LogUtils;
 
 import java.util.ArrayList;

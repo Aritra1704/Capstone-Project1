@@ -1,6 +1,4 @@
-package com.arpaul.geocare.dataObject;
-
-import java.util.ArrayList;
+package com.arpaul.geocare.dataobject;
 
 /**
  * Created by Aritra on 6/15/2016.

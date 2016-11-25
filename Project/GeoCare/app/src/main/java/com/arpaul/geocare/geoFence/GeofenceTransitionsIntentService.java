@@ -1,4 +1,4 @@
-package com.arpaul.geocare.geoFence;
+package com.arpaul.geocare.geofence;
 
 import android.app.IntentService;
 import android.app.NotificationManager;
@@ -18,12 +18,12 @@ import android.util.Log;
 
 import com.arpaul.geocare.GeoFenceActivity;
 import com.arpaul.geocare.R;
-import com.arpaul.geocare.activityRecognition.ActivityRecogNotiService;
+import com.arpaul.geocare.activityrecognition.ActivityRecogNotiService;
 import com.arpaul.geocare.common.AppConstant;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.dataObject.ActivityRecogDO;
-import com.arpaul.geocare.dataObject.GeoFenceLocationDO;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.dataobject.ActivityRecogDO;
+import com.arpaul.geocare.dataobject.GeoFenceLocationDO;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
 import com.arpaul.utilitieslib.CalendarUtils;
 import com.arpaul.utilitieslib.StringUtils;
 import com.google.android.gms.location.Geofence;

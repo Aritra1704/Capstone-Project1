@@ -11,8 +11,7 @@ import android.widget.Toast;
 
 import com.arpaul.geocare.BaseActivity;
 import com.arpaul.geocare.R;
-import com.arpaul.geocare.dataObject.MessageDO;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
+import com.arpaul.geocare.dataobject.MessageDO;
 
 import java.util.ArrayList;
 

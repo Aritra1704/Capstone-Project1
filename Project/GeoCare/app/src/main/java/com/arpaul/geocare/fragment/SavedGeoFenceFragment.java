@@ -1,6 +1,5 @@
 package com.arpaul.geocare.fragment;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -15,21 +14,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.arpaul.geocare.FenceActivity;
-import com.arpaul.geocare.GeoFenceActivity;
 import com.arpaul.geocare.LocationSearchActivity;
 import com.arpaul.geocare.R;
 import com.arpaul.geocare.adapter.GeoLocationsAdapter;
 import com.arpaul.geocare.common.ApplicationInstance;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
 import com.arpaul.utilitieslib.StringUtils;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 /**
  * Created by Aritra on 03-11-2016.

@@ -13,9 +13,8 @@ import android.widget.Toast;
 
 import com.arpaul.geocare.BaseActivity;
 import com.arpaul.geocare.R;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
-import com.arpaul.geocare.fragment.SavedGeoFenceFragment;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
 
 import java.util.ArrayList;
 

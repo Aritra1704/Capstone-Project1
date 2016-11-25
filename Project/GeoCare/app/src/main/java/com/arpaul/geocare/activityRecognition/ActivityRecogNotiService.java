@@ -1,4 +1,4 @@
-package com.arpaul.geocare.activityRecognition;
+package com.arpaul.geocare.activityrecognition;
 
 import android.app.PendingIntent;
 import android.app.Service;
@@ -9,10 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.arpaul.geocare.common.AppConstant;
-import com.arpaul.geocare.dataObject.ActivityRecogDO;
-import com.arpaul.geocare.dataObject.GeoFenceLocationDO;
-import com.arpaul.geocare.geoFence.GeofenceTransitionsIntentService;
-import com.arpaul.utilitieslib.CalendarUtils;
+import com.arpaul.geocare.dataobject.ActivityRecogDO;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;

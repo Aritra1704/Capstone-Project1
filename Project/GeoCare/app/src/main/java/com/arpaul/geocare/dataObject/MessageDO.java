@@ -1,4 +1,4 @@
-package com.arpaul.geocare.dataObject;
+package com.arpaul.geocare.dataobject;
 
 import java.io.Serializable;
 

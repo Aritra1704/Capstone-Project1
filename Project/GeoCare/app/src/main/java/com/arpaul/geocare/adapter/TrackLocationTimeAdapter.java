@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.arpaul.geocare.BaseActivity;
 import com.arpaul.geocare.R;
-import com.arpaul.geocare.dataObject.ActivityRecogDO;
+import com.arpaul.geocare.dataobject.ActivityRecogDO;
 
 import java.util.ArrayList;
 

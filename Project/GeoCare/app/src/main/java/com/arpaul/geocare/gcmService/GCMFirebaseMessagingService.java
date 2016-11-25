@@ -1,18 +1,11 @@
-package com.arpaul.geocare.gcmService;
+package com.arpaul.geocare.gcmservice;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.arpaul.geocare.R;
 import com.arpaul.geocare.common.AppConstant;
-import com.arpaul.geocare.dataObject.MessageDO;
+import com.arpaul.geocare.dataobject.MessageDO;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 

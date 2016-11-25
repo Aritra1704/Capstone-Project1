@@ -1,4 +1,4 @@
-package com.arpaul.geocare.geoFence;
+package com.arpaul.geocare.geofence;
 
 import android.content.Context;
 import android.content.res.Resources;

@@ -32,24 +32,19 @@ import com.arpaul.customalertlibrary.popups.statingDialog.CustomPopupType;
 import com.arpaul.geocare.common.AppConstant;
 import com.arpaul.geocare.common.AppPreference;
 import com.arpaul.geocare.common.ApplicationInstance;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.dataAccess.InsertDataType;
-import com.arpaul.geocare.dataAccess.InsertLoader;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
-import com.arpaul.geocare.geoFence.GeoFenceNotiService;
-import com.arpaul.geocare.geoFence.GeofenceErrorMessages;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.dataaccess.InsertLoader;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
+import com.arpaul.geocare.geofence.GeoFenceNotiService;
 import com.arpaul.gpslibrary.fetchAddressGeoCode.AddressConstants;
 import com.arpaul.gpslibrary.fetchAddressGeoCode.AddressDO;
 import com.arpaul.gpslibrary.fetchAddressGeoCode.FetchAddressLoader;
 import com.arpaul.gpslibrary.fetchAddressGeoCode.FetchGeoCodeLoader;
-import com.arpaul.gpslibrary.fetchLocation.GPSErrorCode;
 import com.arpaul.utilitieslib.LogUtils;
 import com.arpaul.utilitieslib.PermissionUtils;
 import com.arpaul.utilitieslib.StringUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
@@ -57,8 +52,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.LatLng;
+
+import static com.arpaul.geocare.dataaccess.InsertDataPref.INSERT_PREF_LOC;
 
 /**
  * Created by ARPaul on 29-10-2016.
@@ -225,7 +221,8 @@ public class LocationSearchActivity extends BaseActivity implements
                                 cursor.close();
                                 showCustomDialog(getString(R.string.alert),getString(R.string.same_location_exists),getString(R.string.ok),null,getString(R.string.same_location_exists), CustomPopupType.DIALOG_ALERT,true);
                             } else {
-                                cursor.close();
+                                if(cursor != null && !cursor.isClosed())
+                                    cursor.close();
 
                                 cursor = getContentResolver().query(CONTENT_URI,
                                         new String[]{"MAX(" + PrefLocationDO.LOCATIONID + ") AS " + PrefLocationDO.MAXLOCATIONID},
@@ -249,7 +246,8 @@ public class LocationSearchActivity extends BaseActivity implements
 
                                 getSupportLoaderManager().initLoader(ApplicationInstance.LOADER_SAVE_LOCATION, bundle, LocationSearchActivity.this).forceLoad();
                             }
-                            cursor.close();
+                            if(cursor != null && !cursor.isClosed())
+                                cursor.close();
 
                         }
                     }
@@ -561,7 +559,8 @@ public class LocationSearchActivity extends BaseActivity implements
                 return new FetchGeoCodeLoader(this, edtAddress.getText().toString());
 
             case ApplicationInstance.LOADER_SAVE_LOCATION:
-                return new InsertLoader(this, InsertDataType.INSERT_PREF_LOC, args);
+//                return new InsertLoader(this, InsertDataType.INSERT_PREF_LOC, args);
+                return new InsertLoader(this, INSERT_PREF_LOC, args);
 
             default:
                 return null;

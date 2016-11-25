@@ -1,6 +1,5 @@
 package com.arpaul.geocare;
 
-import android.*;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -9,16 +8,13 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,8 +27,8 @@ import com.arpaul.customalertlibrary.popups.statingDialog.CustomPopupType;
 import com.arpaul.customalertlibrary.popups.statingDialog.PopupListener;
 import com.arpaul.geocare.common.AppConstant;
 import com.arpaul.geocare.common.AppPreference;
-import com.arpaul.geocare.dataAccess.GCCPConstants;
-import com.arpaul.geocare.geoFence.GeoFenceNotiService;
+import com.arpaul.geocare.dataaccess.GCCPConstants;
+import com.arpaul.geocare.geofence.GeoFenceNotiService;
 import com.arpaul.utilitieslib.FileUtils;
 import com.arpaul.utilitieslib.LogUtils;
 import com.arpaul.utilitieslib.PermissionUtils;
@@ -73,18 +69,9 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupLis
 
         initialize();
 
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
-        //Remove later
-        startService(new Intent(BaseActivity.this, GeoFenceNotiService.class));
+        if (savedInstanceState == null) {
+            startService(new Intent(BaseActivity.this, GeoFenceNotiService.class));
+        }
     }
 
     @Override

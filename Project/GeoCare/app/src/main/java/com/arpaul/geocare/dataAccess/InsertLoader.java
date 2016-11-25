@@ -1,4 +1,4 @@
-package com.arpaul.geocare.dataAccess;
+package com.arpaul.geocare.dataaccess;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
-import com.arpaul.geocare.dataObject.PrefLocationDO;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
 import com.arpaul.utilitieslib.LogUtils;
+
+import static com.arpaul.geocare.dataaccess.InsertDataPref.INSERT_PREF_LOC;
 
 /**
  * Created by Aritra on 14-07-2016.
@@ -20,6 +22,7 @@ public class InsertLoader extends AsyncTaskLoader {
     private InsertDataType dataType;
 
     private final String TAG = "InsertLoader";
+    private int dataPref;
 
     public final static String BUNDLE_INSERTLOADER      = "BUNDLE_INSERTLOADER";
 
@@ -51,6 +54,23 @@ public class InsertLoader extends AsyncTaskLoader {
     /**
      *
      * @param context
+     * @param dataPref
+     * @param bundle
+     */
+    public InsertLoader(Context context, int dataPref, Bundle bundle){
+        super(context);
+        onContentChanged();
+        this.context = context;
+        this.dataType = dataType;
+        if(bundle != null)
+            data = bundle.get(BUNDLE_INSERTLOADER);
+
+        this.dataPref = dataPref;
+    }
+
+    /**
+     *
+     * @param context
      * @param dataType
      * @param data
      */
@@ -70,7 +90,9 @@ public class InsertLoader extends AsyncTaskLoader {
 
     @Override
     public Object loadInBackground() {
-        switch (dataType){
+
+        @InsertDataPref.InsertDataPreference int dataPreference = dataPref;
+        switch (dataPreference) {
             case INSERT_PREF_LOC:
                 if(data != null && data instanceof PrefLocationDO){
                     PrefLocationDO objPrefLocationDO = (PrefLocationDO) data;
@@ -105,6 +127,42 @@ public class InsertLoader extends AsyncTaskLoader {
 
                 break;
         }
+
+//        switch (dataType){
+//            case INSERT_PREF_LOC:
+//                if(data != null && data instanceof PrefLocationDO){
+//                    PrefLocationDO objPrefLocationDO = (PrefLocationDO) data;
+//                    ContentValues contentValues = new ContentValues();
+//                    contentValues.put(PrefLocationDO.LOCATIONID, objPrefLocationDO.LocationId);
+//                    contentValues.put(PrefLocationDO.LOCATIONNAME, objPrefLocationDO.LocationName);
+//                    contentValues.put(PrefLocationDO.ADDRESS, objPrefLocationDO.Address);
+//                    contentValues.put(PrefLocationDO.LATITUDE, objPrefLocationDO.Latitude);
+//                    contentValues.put(PrefLocationDO.LONGITUDE, objPrefLocationDO.Longitude);
+//                    contentValues.put(PrefLocationDO.RADIUS, objPrefLocationDO.Radius);
+//
+//                    String address = "";
+//                    int tryUpdate = context.getContentResolver().update(GCCPConstants.CONTENT_URI_SAVED_LOC,
+//                            contentValues,
+//                            PrefLocationDO.LOCATIONID + GCCPConstants.TABLE_QUES,
+//                            new String[]{objPrefLocationDO.LocationId + ""});
+//
+//                    if (tryUpdate <= 0){
+//                        Uri uri = context.getContentResolver().insert(GCCPConstants.CONTENT_URI_SAVED_LOC, contentValues);
+//                        if(uri != null)
+//                            address = objPrefLocationDO.Address;
+//                    } else {
+//                        address = objPrefLocationDO.Address;
+//                    }
+//
+//                    return address;
+//                }
+//                break;
+//
+//
+//            default:
+//
+//                break;
+//        }
         return null;
     }
 

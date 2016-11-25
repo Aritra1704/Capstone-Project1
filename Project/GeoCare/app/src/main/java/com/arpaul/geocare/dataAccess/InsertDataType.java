@@ -1,4 +1,4 @@
-package com.arpaul.geocare.dataAccess;
+package com.arpaul.geocare.dataaccess;
 
 /**
  * Created by Aritra on 14-07-2016.

@@ -1,12 +1,12 @@
-package com.arpaul.geocare.dataAccess;
+package com.arpaul.geocare.dataaccess;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.arpaul.geocare.dataObject.ActivityRecogDO;
-import com.arpaul.geocare.dataObject.GeoFenceLocationDO;
-import com.arpaul.geocare.dataObject.PrefLocationDO;
+import com.arpaul.geocare.dataobject.ActivityRecogDO;
+import com.arpaul.geocare.dataobject.GeoFenceLocationDO;
+import com.arpaul.geocare.dataobject.PrefLocationDO;
 
 
 /**

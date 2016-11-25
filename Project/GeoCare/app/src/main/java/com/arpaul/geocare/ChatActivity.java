@@ -15,7 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.arpaul.geocare.adapter.ChatAdapter;
-import com.arpaul.geocare.dataObject.MessageDO;
+import com.arpaul.geocare.dataobject.MessageDO;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -112,7 +112,7 @@ public class ChatActivity extends BaseActivity {
             public void onClick(View view) {
 
                 MessageDO friendlyMessage = new MessageDO(mUsername, edtMessage.getText().toString());
-                mMessageDtabaseRef.child(MESSAGES_CHILD).push().setValue(friendlyMessage);
+                mMessageDtabaseRef/*.child(MESSAGES_CHILD)*/.push().setValue(friendlyMessage);
 
                 // Clear input box
                 edtMessage.setText("");

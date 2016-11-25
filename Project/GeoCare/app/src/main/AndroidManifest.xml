@@ -63,29 +63,29 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
-        <service android:name=".geoFence.GeofenceTransitionsIntentService" />
-        <service android:name=".geoFence.GeoFenceNotiService" />
-        <service android:name=".gcmService.GCMFirebaseMessagingService">
+        <service android:name=".geofence.GeofenceTransitionsIntentService" />
+        <service android:name=".geofence.GeoFenceNotiService" />
+        <service android:name=".gcmservice.GCMFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".gcmService.GCMFirebaseInstanceIDService">
+        <service android:name=".gcmservice.GCMFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <service
-            android:name=".activityRecognition.ActivityRecogNotiService"
+            android:name=".activityrecognition.ActivityRecogNotiService"
             android:exported="false" />
         <service
-            android:name=".activityRecognition.DetectedIntentService"
+            android:name=".activityrecognition.DetectedIntentService"
             android:exported="false" />
 
         <provider
-            android:name=".dataAccess.ContentProviderHelper"
-            android:authorities="com.arpaul.geocare.dataAccess.ContentProviderHelper"
+            android:name=".dataaccess.ContentProviderHelper"
+            android:authorities="com.arpaul.geocare.dataaccess.ContentProviderHelper"
             android:exported="false"
             android:syncable="true" />
     </application>
