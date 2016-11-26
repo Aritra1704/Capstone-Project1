@@ -160,10 +160,10 @@ public class ListProvider implements RemoteViewsService.RemoteViewsFactory {
         remoteView.setTextViewText(R.id.tvActiRecog, objGeoFenceLocDO.CurrentActivity);
         String geoFenceDate =
                 CalendarUtils.getDateinPattern(objGeoFenceLocDO.OccuranceDate, CalendarUtils.DATE_FORMAT1, CalendarUtils.DATE_FORMAT_WITH_COMMA);
-        remoteView.setTextViewText(R.id.tvLocationDate, "On " + geoFenceDate);
+        remoteView.setTextViewText(R.id.tvLocationDate, context.getString(R.string.on) + geoFenceDate);
         String geoFenceTime =
                 CalendarUtils.getDateinPattern(objGeoFenceLocDO.OccuranceTime, AppConstant.GEO_FENCE_TIMESEC_FORMAT, CalendarUtils.TIME_HOUR_MINUTE);
-        remoteView.setTextViewText(R.id.tvLocationTime, " at " + geoFenceTime);
+        remoteView.setTextViewText(R.id.tvLocationTime, context.getString(R.string.at) + geoFenceTime);
 
         return remoteView;
     }

@@ -181,7 +181,7 @@ public class SignInActivity extends BaseActivity implements GoogleApiClient.OnCo
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(SignInActivity.this, "Invitations sent: " + ids.length, Toast.LENGTH_LONG).show();
+                        Toast.makeText(SignInActivity.this, getString(R.string.invitations_sent) + ids.length, Toast.LENGTH_LONG).show();
                     }
                 });
             } else {
@@ -221,7 +221,7 @@ public class SignInActivity extends BaseActivity implements GoogleApiClient.OnCo
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
-                            Toast.makeText(SignInActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignInActivity.this, getString(R.string.authentication_failed), Toast.LENGTH_SHORT).show();
                         } else {
 //                            startActivity(new Intent(SignInActivity.this, MainActivity.class));
 //                            finish();

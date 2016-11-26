@@ -81,9 +81,9 @@ public class DashboardActivity extends BaseActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Track";
+                    return getString(R.string.track);
                 case 1:
-                    return "GeoPoints";
+                    return getString(R.string.geopoints);
             }
             return null;
         }

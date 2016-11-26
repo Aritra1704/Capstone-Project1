@@ -179,14 +179,14 @@ public class GeoFenceActivity extends BaseActivity implements
 
         currentLatLng = new LatLng(location.getLatitude(), location.getLongitude());
 
-        Toast.makeText(GeoFenceActivity.this, "Lat: "+currentLatLng.latitude+" Lon: "+currentLatLng.longitude, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(GeoFenceActivity.this, "Lat: "+currentLatLng.latitude+" Lon: "+currentLatLng.longitude, Toast.LENGTH_SHORT).show();
         showLocations();
     }
 
     @Override
     public void onResult(@NonNull Status status) {
         if (status.isSuccess()) {
-            Toast.makeText(this,"Geofences Added",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this,"Geofences Added",Toast.LENGTH_SHORT).show();
         } else {
             // Get the status code for the error and log it using a user-friendly message.
             String errorMessage = GeofenceErrorMessages.getErrorString(this, status.getStatusCode());
@@ -292,14 +292,14 @@ public class GeoFenceActivity extends BaseActivity implements
 //                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng,16.0f));
                 MarkerOptions markerOptions = new MarkerOptions().position(currentLatLng);
                 markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
-                markerOptions.title("Your Location");
+                markerOptions.title(getString(R.string.your_location));
                 mMap.addMarker(markerOptions);
                 mMap.addMarker(markerOptions).showInfoWindow();
                 mZoom = 15.0f;
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng,mZoom));
             }
         } else {
-            Toast.makeText(this, "Unable to fetch your current location please try again.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.unable_to_fetch_current_location), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -364,9 +364,9 @@ public class GeoFenceActivity extends BaseActivity implements
 
             if(tmpSearched != null && tmpSearched.size() > 0) {
                 PrefLocationDO objPrefLocationDO = tmpSearched.get(0);
-                String messageBody = "Address: " + objPrefLocationDO.Address +
-                        "\nLat: " + objPrefLocationDO.Latitude + " Long: " + objPrefLocationDO.Longitude +
-                        "\nRadius: " + AppConstant.GEOFENCE_RADIUS_IN_METERS;
+                String messageBody = getString(R.string.address) + objPrefLocationDO.Address +
+                        getString(R.string.lat) + objPrefLocationDO.Latitude + getString(R.string.longitude) + objPrefLocationDO.Longitude +
+                        getString(R.string.radius) + AppConstant.GEOFENCE_RADIUS_IN_METERS;
                 showCustomDialog(objPrefLocationDO.LocationName,messageBody,getString(R.string.ok),null,"GeoFenceCircle", CustomPopupType.DIALOG_SUCCESS,false);
             }
         }

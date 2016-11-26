@@ -125,7 +125,7 @@ public class ChatActivity extends BaseActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null) {
-                    Toast.makeText(ChatActivity.this, "You are logged in", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ChatActivity.this, getString(R.string.you_are_logged_in), Toast.LENGTH_LONG).show();
                     signedInitialize(user.getDisplayName());
                 } else {
                     signedOutCleanup();
@@ -162,9 +162,9 @@ public class ChatActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == RC_SIGN_IN) {
             if(resultCode == RESULT_OK) {
-                Toast.makeText(ChatActivity.this, "Signed In!", Toast.LENGTH_LONG).show();
+                Toast.makeText(ChatActivity.this, getString(R.string.signed_in_exclam), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(ChatActivity.this, "Signed In canceled", Toast.LENGTH_LONG).show();
+                Toast.makeText(ChatActivity.this, getString(R.string.signed_in_canceled), Toast.LENGTH_LONG).show();
                 finish();
             }
         }

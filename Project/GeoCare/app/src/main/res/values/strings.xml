@@ -103,6 +103,21 @@
     <string name="cd_add_image_chat">Add image chat</string>
     <string name="cd_clear_address">Clear Address</string>
     <string name="num_25">25</string>
+    <string name="your_location">Your Location</string>
+    <string name="address">Address: </string>
+    <string name="track">Track</string>
+    <string name="geopoints">GeoPoints</string>
+    <string name="lat">\nLat: </string>
+    <string name="longitude"> Long: </string>
+    <string name="radius">\nRadius: </string>
+    <string name="on">On </string>
+    <string name="at"> at </string>
+    <string name="invitations_sent">Invitations sent: </string>
+    <string name="authentication_failed">Authentication failed.</string>
+    <string name="you_are_logged_in">You are logged in</string>
+    <string name="signed_in_exclam">Signed In!</string>
+    <string name="signed_in_canceled">Signed In canceled</string>
+    <string name="unable_to_fetch_current_location">Unable to fetch your current location please try again.</string>
 
     <!--API_KEY-->
     <string name="server_client_id">API_KEY</string>

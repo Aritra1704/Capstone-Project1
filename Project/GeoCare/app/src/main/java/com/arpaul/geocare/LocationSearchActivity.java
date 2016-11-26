@@ -429,7 +429,7 @@ public class LocationSearchActivity extends BaseActivity implements
 
         currentLatLng = new LatLng(location.getLatitude(), location.getLongitude());
 
-        Toast.makeText(LocationSearchActivity.this, "Lat: "+currentLatLng.latitude+" Lon: "+currentLatLng.longitude, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(LocationSearchActivity.this, "Lat: "+currentLatLng.latitude+" Lon: "+currentLatLng.longitude, Toast.LENGTH_SHORT).show();
         showCurrentLocation();
         startIntentService();
     }
@@ -505,7 +505,7 @@ public class LocationSearchActivity extends BaseActivity implements
             }
         }
         else {
-            Toast.makeText(this, "Unable to fetch your current location please try again.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.unable_to_fetch_current_location), Toast.LENGTH_SHORT).show();
         }
     }
 
