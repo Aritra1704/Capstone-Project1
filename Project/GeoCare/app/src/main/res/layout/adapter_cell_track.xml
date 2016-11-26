@@ -19,14 +19,15 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:orientation="horizontal"
-            android:paddingLeft="@dimen/margin_5">
+            android:paddingLeft="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_5">
 
             <TextView
                 android:id="@+id/tvLocationName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tour"
+                android:text=""
                 android:textColor="@color/color_Black"
                 android:textSize="@dimen/textsize_18" />
 
@@ -36,7 +37,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/margin_5"
                 android:paddingLeft="@dimen/margin_5"
-                android:text="Tour desc"
+                android:paddingRight="@dimen/margin_5"
+                android:text=""
                 android:textColor="@color/blue_grey_800"
                 android:textSize="@dimen/textsize_12" />
         </LinearLayout>

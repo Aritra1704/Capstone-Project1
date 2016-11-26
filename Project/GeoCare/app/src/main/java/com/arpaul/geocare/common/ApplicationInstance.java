@@ -1,13 +1,13 @@
 package com.arpaul.geocare.common;
 
-import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 
 /**
  * Created by Aritra on 19-09-2016.
  */
-public class ApplicationInstance extends Application {
+public class ApplicationInstance extends MultiDexApplication {
 
     public static final int LOADER_FETCH_ADDRESS            = 1;
     public static final int LOADER_FETCH_LOCATION           = 2;

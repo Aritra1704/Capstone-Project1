@@ -54,6 +54,7 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupLis
     public Typeface tfRegular,tfBold;
     public FirebaseAnalytics mFirebaseAnalytics;
     private final String BASE_TAG = "BaseActivity";
+    //https://developer.android.com/studio/publish/app-signing.html#release-mode
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,7 +210,7 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupLis
             PackageManager manager = this.getPackageManager();
             PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
 
-            File Db = new File("/data/data/" + info.packageName + "/databases/" + GCCPConstants.DATABASE_NAME);
+            File Db = new File(/*"/data/data/"*/getFilesDir().getPath() + info.packageName + "/databases/" + GCCPConstants.DATABASE_NAME);
             Date d = new Date();
 
             String path = Environment.getExternalStorageDirectory() + AppConstant.EXTERNAL_FOLDER;

@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/margin_5"
-                android:text="Tour"
+                android:text=""
                 android:textColor="@color/color_Black"
                 android:textSize="@dimen/textsize_18" />
 
@@ -32,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:padding="@dimen/margin_5"
+                android:contentDescription="@string/cd_delete_location"
                 app:srcCompat="@drawable/svg_delete" />
         </FrameLayout>
 
@@ -40,7 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/margin_5"
-            android:text="Tour desc"
+            android:paddingRight="@dimen/margin_5"
+            android:text=""
             android:textColor="@color/blue_grey_800"
             android:textSize="@dimen/textsize_12" />
     </LinearLayout>

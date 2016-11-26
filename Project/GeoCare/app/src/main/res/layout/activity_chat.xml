@@ -30,6 +30,7 @@
         <ImageButton
             android:id="@+id/imgbPhotoPicker"
             android:layout_width="36dp"
+            android:contentDescription="@string/cd_add_image_chat"
             android:layout_height="36dp"
             android:background="@android:drawable/ic_menu_gallery"/>
 
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:enabled="false"
-            android:text="Send"/>
+            android:text="@string/send"/>
 
     </LinearLayout>
 

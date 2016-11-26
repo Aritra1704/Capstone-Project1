@@ -16,7 +16,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Tour"
+            android:text=""
             android:textColor="@color/blue_grey_800"
             android:textSize="@dimen/textsize_12" />
 
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_10"
-            android:text="Tour"
+            android:text=""
             android:textColor="@color/blue_grey_800"
             android:textSize="@dimen/textsize_12" />
     </LinearLayout>
@@ -34,7 +34,7 @@
         android:id="@+id/tvActiRecog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tour"
+        android:text=""
         android:textColor="@color/color_LightBrown"
         android:textSize="@dimen/textsize_12" />
 </LinearLayout>

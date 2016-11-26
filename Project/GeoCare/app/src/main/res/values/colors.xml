@@ -18,6 +18,7 @@
     <color name="color_LightGrey">#CDCFCD</color>
     <color name="color_DarkGrey">#313030</color>
     <color name="color_White">#FFFFFF</color>
+    <color name="color_BluishWhite">#EFFAFC</color>
     <color name="color_OffWhite">#F0E0F0</color>
 
     <color name="color_DirtyYellow">#CEC278</color>

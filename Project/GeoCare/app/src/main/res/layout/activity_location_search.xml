@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BaseActivity">
 
     <fragment
@@ -11,14 +11,15 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"/>
+        android:fitsSystemWindows="true" />
 
     <ImageView
         android:id="@+id/ivLocation"
         android:layout_width="@dimen/margin_30"
         android:layout_height="@dimen/margin_30"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/svg_preferred_loc"/>
+        android:contentDescription="@string/cd_preferred_location"
+        app:srcCompat="@drawable/svg_preferred_loc" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -37,7 +38,8 @@
             android:imeOptions="actionSearch"
             android:maxLines="1"
             android:paddingLeft="@dimen/margin_4"
-            android:singleLine="true"/>
+            android:paddingRight="@dimen/margin_4"
+            android:singleLine="true" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -53,8 +55,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_8"
                 android:layout_marginRight="@dimen/margin_8"
+                android:contentDescription="@string/cd_clear_address"
                 android:src="@drawable/svg_cross"
-                android:visibility="visible"/>
+                android:visibility="visible" />
         </LinearLayout>
     </FrameLayout>
 
@@ -70,5 +73,5 @@
         android:background="@drawable/ripple_layout_o"
         android:text="@string/save_location"
         android:textColor="@color/color_White"
-        android:textSize="@dimen/textsize_20"/>
+        android:textSize="@dimen/textsize_20" />
 </RelativeLayout>

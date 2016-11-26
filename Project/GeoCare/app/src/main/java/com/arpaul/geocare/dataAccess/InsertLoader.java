@@ -10,6 +10,7 @@ import android.util.Log;
 import com.arpaul.geocare.dataobject.PrefLocationDO;
 import com.arpaul.utilitieslib.LogUtils;
 
+import static com.arpaul.geocare.dataaccess.InsertDataPref.DELETE_ALL_DATA;
 import static com.arpaul.geocare.dataaccess.InsertDataPref.INSERT_PREF_LOC;
 
 /**
@@ -122,7 +123,8 @@ public class InsertLoader extends AsyncTaskLoader {
                 }
                 break;
 
-
+            case DELETE_ALL_DATA:
+                break;
             default:
 
                 break;
