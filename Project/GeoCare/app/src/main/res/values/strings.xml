@@ -118,6 +118,7 @@
     <string name="signed_in_exclam">Signed In!</string>
     <string name="signed_in_canceled">Signed In canceled</string>
     <string name="unable_to_fetch_current_location">Unable to fetch your current location please try again.</string>
+    <string name="no_data">No Data</string>
 
     <!--API_KEY-->
     <string name="server_client_id">API_KEY</string>
