@@ -26,28 +26,15 @@ public class GCCPConstants {
 
     public static final String DELIMITER = "/";
     public static final String TABLE_ID    = "_id";
-    public static final String TAG_ID = "/#";
-    public static final String TAG_ID_ALL = "/*";
 
-    public static final String TABLE_INNER_JOIN = " INNER JOIN ";
     public static final String TABLE_LEFT_OUTER_JOIN = " LEFT OUTER JOIN ";
     public static final String TABLE_ON = " ON ";
     public static final String TABLE_DOT = ".";
     public static final String TABLE_EQUAL = " = ";
-    public static final String TABLE_WHERE = " WHERE ";
     public static final String TABLE_AND = " AND ";
-    public static final String TABLE_OR = " OR ";
-    public static final String TABLE_IN = " IN ";
-    public static final String TABLE_NOT_IN = " NOT IN ";
-    public static final String TABLE_DISTINCT = " DISTINCT ";
     public static final String TABLE_QUES  = " = ? ";
     public static final String TABLE_LIKE  = " LIKE ? ";
-    public static final String TABLE_NOT_QUES  = " != ? ";
-    public static final String TABLE_IN_BRACKET  = " ( ? ) ";
-    public static final String TABLE_GROUP_BY  = " GROUP BY ";
-    public static final String TABLE_DATE  = " DATE";
     public static final String TABLE_ORDER_BY  = " ORDER BY ";
-    public static final String TABLE_ASC  = " ASC ";
     public static final String TABLE_DESC  = " DESC ";
     public static final String TABLE_FTTIME  = " strftime('%H %M', ";
     public static final String TABLE_IN_ENDBRACKET  = " ) ";
